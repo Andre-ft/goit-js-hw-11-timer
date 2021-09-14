@@ -15,8 +15,6 @@ export default class CountdownTimer{
         refs.hoursField = timerBlock.querySelector('[data-value="hours"]')
         refs.minsField = timerBlock.querySelector('[data-value="mins"]')
         refs.secsField = timerBlock.querySelector('[data-value="secs"]')
-        // console.log('refs', refs);
-        // console.log('targetDate', this._targetDate);
         return refs;
     }
 
@@ -30,8 +28,6 @@ export default class CountdownTimer{
             }
             const timeComponents = this.getTimeComponents(deltaTime);
             this.updateTimerFace(timeComponents);
-  /*          this.onTick(time);
- */            // console.log(`${hours}:${mins}:${secs}`);
         }, 1000);
     }
 
@@ -54,5 +50,3 @@ export default class CountdownTimer{
         this._refs.secsField.textContent = secs;
     }
 }
-
-// export default Timer;
