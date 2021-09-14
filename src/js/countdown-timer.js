@@ -24,6 +24,8 @@ export default class CountdownTimer{
             const deltaTime = this._targetDate - currentTime;
             if (deltaTime <= 0) {
                 clearInterval(this._intervalId);
+                const timeComponents = this.getTimeComponents(0);
+                this.updateTimerFace(timeComponents);
                 return;
             }
             const timeComponents = this.getTimeComponents(deltaTime);
